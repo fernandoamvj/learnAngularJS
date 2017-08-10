@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>First Controller</title>
+  </head>
+  <body ng-app='notesApp'>
+    <div ng-controller="FirstCtrl as ctrl">
+      {{ctrl.message}}
+      </br>
+      <button ng-click="ctrl.changeMessage()">
+        Change Message
+      </button>
+
+      </br>
+    </div>
+    Hello {{1 +2}}rd time AngularJS
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      angular.module('notesApp',[]).controller('FirstCtrl',[function(){
+        var self=this;
+        self.message="Hi!!!";
+        self.changeMessage = function(){
+          self.message = "Bye";
+        };
+        console.log('First CTRLLLLLLLLLLLLLLLLLL');
+      }]);
+    </script>
+  </body>
+</html>
